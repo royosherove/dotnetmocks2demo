@@ -1,0 +1,20 @@
+﻿<td><input type="checkbox" {#if $T.d.HasChildren} disabled {#/if} class="chk"/></td>
+<td>{$T.d.Avatar}</td>
+<td><span class="commenttitle">{$T.d.Title}</span>
+    {$T.d.Teaser}</td>
+<td>{$T.d.Ip}</td>
+<td><span class="comment_date">{$T.d.Date}</span><span class="comment_time">{$T.d.Time}</span></td>
+<td>
+    <div class="rowTools">
+        <div class="rowToolsMenu">
+            <a class="editAction" href="#" onclick="return EditComment('{$T.d.Id}');" title="{BlogAdmin.i18n.edit}"><i class="icon-edit icon-large"></i></a>
+            {#if window.location.href.indexOf('Spam.aspx') > 0 || window.location.href.indexOf('Pending.aspx') > 0}
+            <a class="approveAction" href="#" onclick="return CommentAction('Approve','{$T.d.Id}');" title="{BlogAdmin.i18n.approve}"><i class="icon-trash icon-large"></i></a>
+            {#/if}
+            {#if window.location.href.indexOf('Approved.aspx') > 0}
+            <a class="unapproveAction" href="#" onclick="return CommentAction('Reject','{$T.d.Id}');" title="{BlogAdmin.i18n.unapprove}"><i class="icon-trash icon-large"></i></a>
+            {#/if}
+            {#if $T.d.HasChildren == false}<a href="#" class="deleteAction" onclick="return CommentAction('Delete','{$T.d.Id}');" title="{BlogAdmin.i18n.doDelete}"><i class="icon-trash icon-large"></i></a>{#/if}
+        </div>
+    </div>
+</td>

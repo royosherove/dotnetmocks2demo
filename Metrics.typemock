@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<MetricsData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastLoadedTestDate>0001-01-01T00:00:00</LastLoadedTestDate>
+  <Data>
+    <DataPerDate Date="2010-11-08T00:00:00+01:00" ProductionMinutes="2.2832166666666671" ManualTestingMinutes="0" CreatingUnitTestsMinutes="0" RunningUnitTestsMinutes="0" FailedTestsCount="0" />
+    <DataPerDate Date="2010-11-09T00:00:00+01:00" ProductionMinutes="51.392849999999562" ManualTestingMinutes="0" CreatingUnitTestsMinutes="77.832100000002754" RunningUnitTestsMinutes="0" FailedTestsCount="0" />
+  </Data>
+  <Server Name="ROYOW510" Connection="net.tcp://192.168.56.1:7010" />
+  <Solution>C:\globalshare\ppt\TDD Oslo October 2010\day2\demos\MockObjects2.sln</Solution>
+  <UnsolvedTests />
+</MetricsData>

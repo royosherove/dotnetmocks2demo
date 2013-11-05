@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB8182E3-D2A9-450E-BCD8-3378EE14F3F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleMocks.tests</RootNamespace>
+    <AssemblyName>SimpleMocks.tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bricks">
+      <HintPath>..\packages\White.0.2.0\lib\net35\Bricks.dll</HintPath>
+    </Reference>
+    <Reference Include="Bricks.RuntimeFramework">
+      <HintPath>..\packages\White.0.2.0\lib\net35\Bricks.RuntimeFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.1.1.0\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2">
+      <HintPath>..\packages\Castle.DynamicProxy.2.1.0\lib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="FakeItEasy, Version=1.13.1.0, Culture=neutral, PublicKeyToken=eff28e2146d5fd2c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FakeItEasy.1.13.1\lib\net40\FakeItEasy.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=3.1.416.3, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.4.2.0\lib\NET40\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.1.12217, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.1\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\nunit\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.5.0.1337, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TypeMock">
+      <HintPath>..\..\..\..\..\globalshare\ppt\NDC 2010\Cogs in the machine\CogsDemos\Dependencies\Typemock\TypeMock.dll</HintPath>
+    </Reference>
+    <Reference Include="Typemock.ArrangeActAssert">
+      <HintPath>..\..\..\..\..\globalshare\ppt\NDC 2010\Cogs in the machine\CogsDemos\Dependencies\Typemock\Typemock.ArrangeActAssert.Dll</HintPath>
+    </Reference>
+    <Reference Include="White.Core">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="White.CustomControls">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.dll</HintPath>
+    </Reference>
+    <Reference Include="White.CustomControls.Peers">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.Peers.dll</HintPath>
+    </Reference>
+    <Reference Include="White.CustomControls.Peers.Silverlight">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.Peers.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="White.CustomControls.Silverlight">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="White.NUnit">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.NUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="White.Recorder">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.Recorder.exe</HintPath>
+    </Reference>
+    <Reference Include="White.Reporting">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="White.Repository">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="White.WebBrowser">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Xstream.Core">
+      <HintPath>..\packages\xstream-dot-net.1.0.3552.35177\lib\net20\Xstream.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="0_LoginManagerTests_Manual.cs" />
+    <Compile Include="1_LoginManagerTestsDemoNUnitMocks.cs" />
+    <Compile Include="5_LoginManagerTestsDemoFakeItEasy.cs" />
+    <Compile Include="6_LoginManagerTestsDemoNSub.cs" />
+    <Compile Include="StringCalculatorTests.cs" />
+    <Compile Include="white_examples.cs" />
+    <Compile Include="IsolatorOnly\LoginManagerWithStaticsTests.cs" />
+    <Compile Include="IsolatorOnly\LoginManagerWithFutureTests.cs" />
+    <Compile Include="4_LoginManagerTestsDemoIsolator.cs" />
+    <Compile Include="3_LoginManagerTestsDemoMoq.cs" />
+    <Compile Include="2_LoginManagerTestsDemoRhino.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleMocks\MyBillingProduct.csproj">
+      <Project>{94677955-90A3-442D-A246-A1DAE76B29D2}</Project>
+      <Name>MyBillingProduct</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

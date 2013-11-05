@@ -1,0 +1,34 @@
+﻿{#if $T.d.length == 0}
+<div class="info">
+    {BlogAdmin.i18n.youHaveNotAddedAnyUserSoFar}
+</div>
+{#else}
+<table id="UserService" class="beTable rounded">
+  <thead>
+    <tr>
+	  <th width="20"><input type="checkbox" id="selectall" onclick="toggleAllChecks(this)" /></th>
+      <th width="220">{BlogAdmin.i18n.name}</th>
+	  <th width="auto">{BlogAdmin.i18n.email}</th>
+	  <th width="120">{BlogAdmin.i18n.tools}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {#foreach $T.d as post}
+	<tr class="{#cycle values=['','alt']}">
+	  <td><input type="checkbox" name="chk"{$T.post.UserName} class="chk"/></td>
+      <td class="username">{$T.post.UserName}</td>
+      <td class="editable">{$T.post.Email}</td>
+      <td>
+          <div class="rowTools">
+              <div class="rowToolsMenu" id="users">
+                <a href="#" class="editButton editAction" title="{BlogAdmin.i18n.edit}"><i class="icon-edit icon-large"></i></a>
+                <a href="#" id="del-{$T.post.UserName}" class="deleteButton deleteAction" title="{BlogAdmin.i18n.doDelete}"><i class="icon-trash icon-large"></i></a>
+                <a class="iconAction" href="Profile.aspx?id={$T.post.UserName}" title="{BlogAdmin.i18n.profile}"><i class="icon-user icon-large"></i></a>
+              </div>
+          </div>
+      </td>
+    </tr>
+    {#/for}
+  </tbody>
+</table>
+{#/if}

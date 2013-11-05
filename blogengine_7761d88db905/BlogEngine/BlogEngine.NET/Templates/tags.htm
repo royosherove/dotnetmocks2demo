@@ -1,0 +1,33 @@
+﻿{#if $T.d.length == 0}
+<div class="info">
+    {BlogAdmin.i18n.youHaveNoTaggedPosts}
+</div>
+{#else}
+<table id="Tags" class="beTable rounded">
+  <thead>
+    <tr>
+      <th width="auto">{BlogAdmin.i18n.tags}</th>
+      <th width="120">{BlogAdmin.i18n.posts}</th>
+      <th width="120">{BlogAdmin.i18n.count}</th>
+	  <th width="120">&nbsp;{BlogAdmin.i18n.tools}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {#foreach $T.d as post}
+    <tr class="{#cycle values=['','alt']}">
+      <td class="editable">{$T.post.TagName}</td>
+      <td><a href="../../?tag=/{$T.post.TagName}">{BlogAdmin.i18n.view}</a></td>    
+      <td>{$T.post.TagCount}</td>
+      <td>
+        <div class="rowTools">
+            <div class="rowToolsMenu">
+                <a href="#" class="editButton editAction" title="{BlogAdmin.i18n.edit}"><i class="icon-edit icon-large"></i></a>
+                <a href="#" class="deleteButton deleteAction" title="{BlogAdmin.i18n.doDelete}"><i class="icon-trash icon-large"></i></a>
+            </div>
+        </div>
+      </td>
+    </tr>
+    {#/for}
+  </tbody>
+</table>
+{#/if}
