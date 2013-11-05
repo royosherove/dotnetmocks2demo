@@ -11,10 +11,10 @@ namespace MyBilingProduct.tests
     {
         public string Written;
 
-        protected override void callLogger(string text)
-        {
-            Written = text;
-        }
+        //protected override void callLogger(string text)
+        //{
+        //    Written = text;
+        //}
     }
 
     [TestFixture]
@@ -115,29 +115,29 @@ namespace MyBilingProduct.tests
         }
 
 
-        [Test]
-        public void IsLoginOK_WhenCalled_CallsLogger()
-        {
-            var lm = new TestableLoginManagerWithStatics();
+        //[Test]
+        //public void IsLoginOK_WhenCalled_CallsLogger()
+        //{
+        //    var lm = new TestableLoginManagerWithStatics();
 
-            lm.IsLoginOK("user", "somepass");
+        //    lm.IsLoginOK("user", "somepass");
 
-            StringAssert.Contains("ok",lm.LogText);
+        //    StringAssert.Contains("ok",lm.LogText);
 
-        }
-        [Test]
-        public void IsLoginOK_LoggerFailes_CallsWSWithMachineName()
-        {
-            var lm = new TestableLoginManagerWithStatics();
-            lm.MachineNameWillBe = "machine";
-            SystemTime.Set(new DateTime(2000, 1, 1));
+        //}
+        //[Test]
+        //public void IsLoginOK_LoggerFailes_CallsWSWithMachineName()
+        //{
+        //    var lm = new TestableLoginManagerWithStatics();
+        //    lm.MachineNameWillBe = "machine";
+        //    SystemTime.Set(new DateTime(2000, 1, 1));
 
 
-            lm.IsLoginOK("user", "somepass");
+        //    lm.IsLoginOK("user", "somepass");
 
-            StringAssert.Contains("ok",lm.LogText);
+        //    StringAssert.Contains("ok",lm.LogText);
 
-        }
+        //}
 
         [TearDown]
         public void afterEachTest()
